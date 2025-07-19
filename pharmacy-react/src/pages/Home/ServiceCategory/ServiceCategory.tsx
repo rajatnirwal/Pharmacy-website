@@ -46,7 +46,7 @@ const categories = [
 
 const ServiceCategory = () => {
   return (
-    <div className="flex flex-wrap justify-between py-5 lg:px-20 border-b">
+    <div className="flex flex-wrap justify-center gap-4 py-5 px-4 lg:px-20 border-b">
       {categories.map((category, index) => (
         <ServiceCategoryCard
           key={index}

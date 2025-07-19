@@ -15,7 +15,7 @@ import {
   FavoriteBorder,
   Storefront,
 } from "@mui/icons-material";
-import { Link } from "react-router-dom"; // ✅ For navigation
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const theme = useTheme();
@@ -31,28 +31,32 @@ const Navbar = () => {
   return (
     <>
       <Box
-        className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm"
-        sx={{ borderBottom: "1px solid #e0e0e0" }}
+        className="fixed top-0 left-0 w-full z-50 shadow-sm"
+        sx={{
+          backgroundColor: "#4caf50", // ✅ Primary Green
+          borderBottom: "1px solid #388e3c", // Optional dark separator
+        }}
       >
         <div className="flex items-center justify-between px-5 lg:px-20 h-[70px]">
           {/* Left: Logo + Nav Links */}
           <div className="flex items-center gap-9">
             <div className="flex items-center gap-2">
               {!isLarge && (
-                <IconButton>
+                <IconButton sx={{ color: "white" }}>
                   <MenuIcon />
                 </IconButton>
               )}
-              <h1 className="cursor-pointer text-lg md:text-2xl text-green-600 font-bold">
+              <h1 className="cursor-pointer text-lg md:text-2xl text-white font-bold">
                 <Link to="/">Pharma Cure</Link>
               </h1>
             </div>
-            <ul className="hidden md:flex items-center font-medium text-gray-800">
+
+            <ul className="hidden md:flex items-center font-medium text-white">
               {navItems.map((item, index) => (
                 <li key={index}>
                   <Link
                     to={item.path}
-                    className="h-[70px] px-4 flex items-center hover:text-green-600 hover:border-b-2 border-green-600 transition"
+                    className="h-[70px] px-4 flex items-center hover:text-yellow-200 hover:border-b-2 border-yellow-200 transition"
                   >
                     {item.label}
                   </Link>
@@ -63,29 +67,36 @@ const Navbar = () => {
 
           {/* Right: Icons + Profile + Cart */}
           <div className="flex items-center gap-3 lg:gap-6">
-            <IconButton>
+            <IconButton sx={{ color: "white" }}>
               <SearchIcon />
             </IconButton>
 
-            {/* Avatar/Login */}
-            <Button className="flex items-center gap-2 capitalize">
+            <Button className="flex items-center gap-2 capitalize text-white">
               <Avatar sx={{ width: 29, height: 29 }} src="" />
               <h1 className="font-semibold hidden lg:block">Rajat Nirwal</h1>
             </Button>
 
-            {/* Wishlist Icon */}
-            <IconButton>
+            <IconButton sx={{ color: "white" }}>
               <FavoriteBorder sx={{ fontSize: 29 }} />
             </IconButton>
 
-            {/* Cart Icon */}
-            <IconButton>
-              <AddShoppingCart sx={{ fontSize: 29, color: "#333" }} />
+            <IconButton sx={{ color: "white" }}>
+              <AddShoppingCart sx={{ fontSize: 29 }} />
             </IconButton>
 
-            {/* Become Seller Button */}
             {isLarge && (
-              <Button startIcon={<Storefront />} variant="outlined">
+              <Button
+                startIcon={<Storefront />}
+                variant="outlined"
+                sx={{
+                  color: "white",
+                  borderColor: "white",
+                  "&:hover": {
+                    backgroundColor: "rgba(255,255,255,0.1)",
+                    borderColor: "white",
+                  },
+                }}
+              >
                 Become Seller
               </Button>
             )}
