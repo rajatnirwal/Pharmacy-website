@@ -9,7 +9,6 @@ import {
 import React from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import {
   AddShoppingCart,
   FavoriteBorder,
@@ -31,10 +30,9 @@ const Navbar = () => {
   return (
     <>
       <Box
-        className="fixed top-0 left-0 w-full z-50 shadow-sm"
+        className="fixed top-0 left-0 w-full z-50 bg-primary-color shadow-sm"
         sx={{
-          backgroundColor: "#4caf50", // ✅ Primary Green
-          borderBottom: "1px solid #388e3c", // Optional dark separator
+          borderBottom: "1px solid #14532d", // Slightly darker separator (optional)
         }}
       >
         <div className="flex items-center justify-between px-5 lg:px-20 h-[70px]">

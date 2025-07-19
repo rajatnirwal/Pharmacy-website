@@ -40,25 +40,25 @@ const ProductSlider: React.FC = () => {
   ];
 
   return (
-    <div className="w-full py-6 px-2">
+    <div className="w-full py-6 px-4">
       <Swiper
-        slidesPerView={3}
-        spaceBetween={8}
+        slidesPerView={2.5} // 👈 Default
+        spaceBetween={20}
         navigation={true}
         modules={[Navigation, Autoplay]}
         autoplay={{
-          delay: 2500, // Medium speed autoplay
-          disableOnInteraction: false, // Manual interaction ke baad bhi autoplay chalu rahega
+          delay: 2500,
+          disableOnInteraction: false,
         }}
         breakpoints={{
-          640: { slidesPerView: 2 },
+          640: { slidesPerView: 2.5 },
           768: { slidesPerView: 3 },
           1024: { slidesPerView: 4 },
         }}
       >
         {products.map((product, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-white rounded-xl shadow overflow-hidden hover:scale-105 transition-transform duration-300">
+            <div className="bg-white border-[1.5px] border-primary-color rounded-xl shadow-sm hover:shadow-md transition-transform duration-300 overflow-hidden">
               <img
                 src={product.image}
                 alt={product.name}
