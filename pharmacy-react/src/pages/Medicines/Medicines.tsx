@@ -21,12 +21,15 @@ const Medicines = () => {
             Buy Medicines and Essentials
           </h1>
           <div className="flex bg-white h-14 items-center rounded-lg sm:w-[80%] lg:w-[50%] w-[90%]">
-            <Search size={20} className="mx-4 text-gray-600" />
+            <Search size={24} className="mx-4 text-gray-600" />
             <input
               type="text"
               placeholder="Search Medicines"
               className="outline-none bg-white text-lg flex-1"
             />
+            <button className="bg-green-600 px-4 py-2 text-md text-white font-semibold rounded-lg mx-4 transition delay-150 duration-300 ease-in-out hover:bg-green-800">
+              Search
+            </button>
           </div>
         </div>
       </div>
@@ -41,7 +44,7 @@ const Medicines = () => {
     {healthConditionsData.map((item, index) => (
       <div
         key={index}
-        className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+        className="flex items-center gap-4 p-4 bg-white rounded-xl border border-green-200 shadow-sm shadow-green-950 hover:shadow-md hover:scale-[1.02] transition-all duration-300 cursor-pointer"
       >
         <div className="p-3 rounded-md bg-gray-100">
           <img src={item.image} alt={item.name} className="w-10 h-10" />
