@@ -1,0 +1,3 @@
+[submodule "Pharmacy-website"]
+	path = Pharmacy-website
+	url = https://github.com/rajatnirwal/Pharmacy-website.git
