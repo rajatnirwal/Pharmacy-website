@@ -38,7 +38,7 @@ const Medicines = () => {
           {healthConditionsData.map((item, index) => (
             <div
               key={index}
-              className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+              className="flex items-center gap-4 p-4 bg-white rounded-xl border border-primary-color transition-all duration-300 cursor-pointer hover:scale-[1.03] hover:shadow-lg hover:shadow-primary-color"
             >
               <div className="p-3 rounded-md bg-gray-100">
                 <img src={item.image} alt={item.name} className="w-10 h-10" />
