@@ -16,6 +16,13 @@ code {
   font-weight: 400;
   font-style: normal;
 }
+<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+=======
+/* @import "tailwindcss"; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+>>>>>>> abhi_branch
