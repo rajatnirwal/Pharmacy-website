@@ -1,13 +1,11 @@
 import React from "react";
-import { Search } from "lucide-react";
-
-// Import object instead of name array
-import { healthConditionsData } from "../../assets/assets"; // Ensure this file exports the object correctly
+import SearchBar from "../../customer/components/SearchBar/SearchBar";
+import { healthConditionsData } from "../../assets/assets";
 
 const Medicines = () => {
   return (
     <div className="pt-16 min-h-screen w-full">
-      {/* Top Banner */}
+      {/* Top Banner with Custom Placeholder Search */}
       <div
         className="relative h-[30vh] w-full bg-cover bg-center"
         style={{
@@ -20,49 +18,45 @@ const Medicines = () => {
           <h1 className="text-4xl font-bold text-white mb-8">
             Buy Medicines and Essentials
           </h1>
-          <div className="flex bg-white h-14 items-center rounded-lg sm:w-[80%] lg:w-[50%] w-[90%]">
-            <Search size={24} className="mx-4 text-gray-600" />
-            <input
-              type="text"
-              placeholder="Search Medicines"
-              className="outline-none bg-white text-lg flex-1"
-            />
-            <button className="bg-green-600 px-4 py-2 text-md text-white font-semibold rounded-lg mx-4 transition delay-150 duration-300 ease-in-out hover:bg-green-800">
-              Search
-            </button>
+
+          {/* ✅ Reused SearchBar with custom placeholder */}
+          <div className="w-full flex justify-center">
+            <div className="w-[90%] sm:w-[80%] lg:w-[50%]">
+              <SearchBar placeholder="Search for medicines" />
+            </div>
           </div>
         </div>
       </div>
 
       {/* Health Conditions Section */}
-     <div className="w-full px-10 py-12">
-  <h2 className="text-3xl font-bold mb-8 text-gray-900">
-    Browse by Health Conditions
-  </h2>
+      <div className="w-full px-10 py-12">
+        <h2 className="text-3xl font-bold mb-8 text-gray-900">
+          Browse by Health Conditions
+        </h2>
 
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-    {healthConditionsData.map((item, index) => (
-      <div
-        key={index}
-        className="flex items-center gap-4 p-4 bg-white rounded-xl border border-green-200 shadow-sm shadow-green-950 hover:shadow-md hover:scale-[1.02] transition-all duration-300 cursor-pointer"
-      >
-        <div className="p-3 rounded-md bg-gray-100">
-          <img src={item.image} alt={item.name} className="w-10 h-10" />
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          {healthConditionsData.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+            >
+              <div className="p-3 rounded-md bg-gray-100">
+                <img src={item.image} alt={item.name} className="w-10 h-10" />
+              </div>
+              <span className="text-base font-medium text-gray-800">
+                {item.name}
+              </span>
+            </div>
+          ))}
         </div>
-        <span className="text-base font-medium text-gray-800">
-          {item.name}
-        </span>
       </div>
-    ))}
-  </div>
-</div>
 
-     <div className="w-full px-10 ">
-  <h2 className="text-3xl font-bold mb-8 text-gray-900">
-    Value Deals at Rs 100
-  </h2>
-
-    </div>
+      {/* Value Deals Section */}
+      <div className="w-full px-10">
+        <h2 className="text-3xl font-bold mb-8 text-gray-900">
+          Value Deals at Rs 100
+        </h2>
+      </div>
     </div>
   );
 };
