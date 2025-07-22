@@ -16,6 +16,7 @@ code {
   font-weight: 400;
   font-style: normal;
 }
+/* @import "tailwindcss"; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
