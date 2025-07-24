@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 import React, { useEffect, useState } from "react";
+>>>>>>> abhi_branch
 import {
   Avatar,
   Box,
@@ -7,6 +10,10 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+<<<<<<< HEAD
+import React from "react";
+=======
+>>>>>>> abhi_branch
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import {
@@ -14,6 +21,13 @@ import {
   FavoriteBorder,
   Storefront,
 } from "@mui/icons-material";
+<<<<<<< HEAD
+import { Link } from "react-router-dom";
+
+const Navbar = () => {
+  const theme = useTheme();
+  const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
+=======
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import LoginModal from "../../../pages/Login/Login";
 
@@ -27,6 +41,7 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     setShowModal(location.pathname === "/login");
   }, [location]);
+>>>>>>> abhi_branch
 
   const navItems = [
     { label: "Medicines", path: "/medicines" },
@@ -38,6 +53,15 @@ const Navbar: React.FC = () => {
   return (
     <>
       <Box
+<<<<<<< HEAD
+        className="fixed top-0 left-0 w-full z-50 bg-primary-color shadow-sm"
+        sx={{
+          borderBottom: "1px solid #14532d", // Slightly darker separator (optional)
+        }}
+      >
+        <div className="flex items-center justify-between px-5 lg:px-20 h-[70px]">
+          {/* Left: Logo + Nav Links */}
+=======
         className="fixed top-0 left-0 w-full z-50 shadow-sm"
         sx={{
           backgroundColor: "#4caf50",
@@ -45,6 +69,7 @@ const Navbar: React.FC = () => {
         }}
       >
         <div className="flex items-center justify-between px-5 lg:px-20 h-[70px]">
+>>>>>>> abhi_branch
           <div className="flex items-center gap-9">
             <div className="flex items-center gap-2">
               {!isLarge && (
@@ -71,11 +96,21 @@ const Navbar: React.FC = () => {
             </ul>
           </div>
 
+<<<<<<< HEAD
+          {/* Right: Icons + Profile + Cart */}
+=======
+>>>>>>> abhi_branch
           <div className="flex items-center gap-3 lg:gap-6">
             <IconButton sx={{ color: "white" }}>
               <SearchIcon />
             </IconButton>
 
+<<<<<<< HEAD
+            <Button className="flex items-center gap-2 capitalize text-white">
+              <Avatar sx={{ width: 29, height: 29 }} src="" />
+              <h1 className="font-semibold hidden lg:block">Rajat Nirwal</h1>
+            </Button>
+=======
             {/* ✅ Link to /login triggers modal via URL */}
             <Link
               to="/login"
@@ -85,16 +120,23 @@ const Navbar: React.FC = () => {
               <Avatar sx={{ width: 29, height: 29 }} />
               <h1 className="hidden lg:block">Login</h1>
             </Link>
+>>>>>>> abhi_branch
 
             <IconButton sx={{ color: "white" }}>
               <FavoriteBorder sx={{ fontSize: 29 }} />
             </IconButton>
 
+<<<<<<< HEAD
+            <IconButton sx={{ color: "white" }}>
+              <AddShoppingCart sx={{ fontSize: 29 }} />
+            </IconButton>
+=======
             <Link to="/cart">
             <IconButton sx={{ color: "white" }}>
               <AddShoppingCart sx={{ fontSize: 29 }} />
             </IconButton>
             </Link>
+>>>>>>> abhi_branch
 
             {isLarge && (
               <Button
@@ -115,11 +157,18 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </Box>
+<<<<<<< HEAD
+=======
 
       {/* ✅ Modal based on route */}
       <LoginModal open={showModal} onClose={() => navigate("/")} />
+>>>>>>> abhi_branch
     </>
   );
 };
 
+<<<<<<< HEAD
 export default Navbar;
+=======
+export default Navbar;
+>>>>>>> abhi_branch

@@ -27,7 +27,11 @@ const Home = () => {
       {/* TODAY'S DEAL Section */}
       <section className="pt-10">
         <h1 className="text-lg lg:text-4xl font-bold text-primary-color mb-6 text-center">
+<<<<<<< HEAD
+          TODAY'S DEALS
+=======
           TODAY'S DEAL
+>>>>>>> abhi_branch
         </h1>
         <Deal />
       </section>
