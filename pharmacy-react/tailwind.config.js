@@ -2,16 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
 
-  plugins: [require("tailwind-scrollbar-hide")],
-
   theme: {
     extend: {
-      colors: { "primary-color": "#1b5e20" },
+      colors: {
+        "primary-color": "#1b5e20",
+        "secondary-color": "#4caf50",
+      },
     },
   },
 
-  plugins: [],
-
-  plugins: [require("tailwind-scrollbar-hide")], // ✅ Keep only this
-
+  plugins: [require("tailwind-scrollbar-hide")],
 };
