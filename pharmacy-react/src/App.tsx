@@ -8,6 +8,8 @@ import Home from "./pages/Home/Home";
 import Medicines from "./pages/Medicines/Medicines";
 import Cart from "./pages/Cart/Cart";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ValueStore from "./pages/ValueStore/ValueStore";
+import Product from "./pages/Product/Product";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/medicines" element={<Medicines />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/value-store" element={<ValueStore />} />
+              <Route path="/value-store/:productId" element={<Product/>} />
             </Routes>
           </main>
           <Footer />

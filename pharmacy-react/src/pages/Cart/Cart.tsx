@@ -6,7 +6,7 @@ const Cart = () => {
 
   const shipping = 50;
   const tax = 18;
-  const subtotal = product.price;
+  const subtotal = product.discountPrice;
   const total = subtotal + shipping + tax;
 
   return (
@@ -31,7 +31,7 @@ const Cart = () => {
                 <p className="text-sm mt-2 text-green-700">Qty: 1</p>
               </div>
             </div>
-            <div className="text-lg font-bold text-gray-800">₹{product.price}</div>
+            <div className="text-lg font-bold text-gray-800">₹{product.discountPrice}</div>
           </div>
         </div>
 

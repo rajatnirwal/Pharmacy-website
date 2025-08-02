@@ -28,7 +28,7 @@ const Medicines = () => {
               />
               <h3 className="text-lg font-semibold mb-1">{item.name}</h3>
               <p className="text-sm text-gray-500 mb-2">{item.category[0]}</p>
-              <p className="text-md font-bold text-green-600 mb-2">₹{item.price}</p>
+              <p className="text-md font-bold text-green-600 mb-2">₹{item.discountPrice}</p>
 
               <div className="w-full flex justify-center px-4 py-3">
                 <button
