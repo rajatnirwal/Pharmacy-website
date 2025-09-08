@@ -7,41 +7,45 @@ import Deal from "./Deal/Deal";
 import { Button } from "@mui/material";
 import { Storefront } from "@mui/icons-material";
 import SearchBar from "../../customer/components/SearchBar/SearchBar";
+import Deals from "../../customer/components/Deals/Deals";
 
 const Home = () => {
   return (
-    <div className="space-y-5 lg:space-y-10 relative mt-[70px]">
-      {/* Search Bar */}
-      <div className="bg-[#f6f6f6] py-10">
-        <h2 className="text-2xl font-semibold text-center mb-5">
-          What are you looking for?
-        </h2>
-        <SearchBar />
+    <div className="relative mt-[70px]">
+      {/* ✅ Outer container for alignment */}
+      <div className="container mx-auto px-0 space-y-4 lg:space-y-6">
+        {/* Search Bar */}
+        <div className="py-5 rounded-2xl">
+          <SearchBar />
+        </div>
+
+        {/* Deals Slider */}
+        <Deals />
+
+        {/* Other Sections */}
+        <ServiceCategory />
+        <CategoryGrid />
+        <ProductSlider />
+
+        {/* TODAY'S DEAL Section */}
+        <section className="pt-10">
+          <h1 className="text-lg lg:text-4xl font-bold text-primary-color mb-6 text-center">
+            TODAY'S DEALS
+          </h1>
+          <Deal />
+        </section>
+
+        {/* SHOP BY CATEGORY Section */}
+        <section className="pt-10">
+          <h1 className="text-lg lg:text-4xl font-bold text-primary-color mb-6 text-center">
+            SHOP BY CATEGORY
+          </h1>
+          <ShopByCategory />
+        </section>
       </div>
 
-      <ServiceCategory />
-      <CategoryGrid />
-      <ProductSlider />
-
-      {/* TODAY'S DEAL */}
-      {/* TODAY'S DEAL Section */}
-      <section className="pt-10">
-        <h1 className="text-lg lg:text-4xl font-bold text-primary-color mb-6 text-center">
-          TODAY'S DEALS
-        </h1>
-        <Deal />
-      </section>
-
-      {/* SHOP BY CATEGORY Section */}
-      <section className="pt-10">
-        <h1 className="text-lg lg:text-4xl font-bold text-primary-color mb-6 text-center">
-          SHOP BY CATEGORY
-        </h1>
-        <ShopByCategory />
-      </section>
-
-      {/* Banner Section */}
-      <section className="lg:px-20 relative h-[200px] lg:h-[450px] object-cover">
+      {/* Banner Section (full-width) */}
+      <section className="mt-12 lg:px-20 relative h-[200px] lg:h-[450px] object-cover">
         <img
           className="w-full h-full"
           src="https://assets.pharmeasy.in/apothecary/images/downloadBanner.webp?dim=1440x0&q=100"
